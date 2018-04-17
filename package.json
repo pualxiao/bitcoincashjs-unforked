@@ -1,51 +1,39 @@
 {
-  "name": "bitcoincashjs",
-  "version": "0.1.10",
-  "description": "A simple, safe, and powerful JavaScript Bitcoin Cash library.",
-  "author": "Emilio Almansi <hi@ealmansi.com>",
-  "main": "src/bitcoincash.js",
-  "files": [
-    "src/",
-    "dist/"
-  ],
-  "scripts": {
-    "build": "node scripts/build.js",
-    "build:tests": "node scripts/build-tests.js",
-    "test": "npm run test:node",
-    "test:all": "npm run test:node && npm run test:browser",
-    "test:node": "nyc --reporter=html --reporter=text mocha",
-    "test:browser": "npm run build:tests && karma start",
-    "lint": "node scripts/lint.js",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "preversion": "npm test",
-    "readme": "mustache package.json README.tpl.md > README.md",
-    "version": "npm run build && npm run readme && git add -A dist README.md",
-    "postversion": "git push && git push --tags && npm publish",
-    "bump": "npm version patch -m 'Bump version to %s.'"
+  "_from": "bitcoincashjs",
+  "_id": "bitcoincashjs@0.1.10",
+  "_inBundle": false,
+  "_integrity": "sha512-M4SiYYZEWUqWyp2ZE+imxP6Pgm15B4GIU+PvRo1ISvlgnxrwUANEVWAIW5+tam5MD3sO+XqnfK14ymRw14nCFQ==",
+  "_location": "/bitcoincashjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "bitcoincashjs",
+    "name": "bitcoincashjs",
+    "escapedName": "bitcoincashjs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "keywords": [
-    "bitcoin",
-    "transaction",
-    "address",
-    "p2p",
-    "ecies",
-    "cryptocurrency",
-    "blockchain",
-    "payment",
-    "bip21",
-    "bip32",
-    "bip37",
-    "bip69",
-    "bip70",
-    "multisig"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bitcoincashjs/bitcoincashjs.git"
+  "_resolved": "https://registry.npmjs.org/bitcoincashjs/-/bitcoincashjs-0.1.10.tgz",
+  "_shasum": "be69e215474245996a6d74984984b7e8ab9da1af",
+  "_spec": "bitcoincashjs",
+  "_where": "/home/user/code/bch-tx-test",
+  "author": {
+    "name": "Emilio Almansi",
+    "email": "hi@ealmansi.com"
   },
   "browser": {
     "request": "browser-request"
   },
+  "bugs": {
+    "url": "https://github.com/bitcoincashjs/bitcoincashjs/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "big-integer": "^1.6.26",
     "bn.js": "=2.0.4",
@@ -57,6 +45,8 @@
     "lodash": "^4.17.4",
     "unorm": "^1.4.1"
   },
+  "deprecated": false,
+  "description": "A simple, safe, and powerful JavaScript Bitcoin Cash library.",
   "devDependencies": {
     "brfs": "^1.4.3",
     "browserify": "^14.5.0",
@@ -76,5 +66,48 @@
     "sinon": "^1.13.0",
     "uglify-js": "^3.3.4"
   },
-  "license": "MIT"
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "homepage": "https://github.com/bitcoincashjs/bitcoincashjs#readme",
+  "keywords": [
+    "bitcoin",
+    "transaction",
+    "address",
+    "p2p",
+    "ecies",
+    "cryptocurrency",
+    "blockchain",
+    "payment",
+    "bip21",
+    "bip32",
+    "bip37",
+    "bip69",
+    "bip70",
+    "multisig"
+  ],
+  "license": "MIT",
+  "main": "src/bitcoincash.js",
+  "name": "bitcoincashjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitcoincashjs/bitcoincashjs.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:tests": "node scripts/build-tests.js",
+    "bump": "npm version patch -m 'Bump version to %s.'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "node scripts/lint.js",
+    "postversion": "git push && git push --tags && npm publish",
+    "preversion": "npm test",
+    "readme": "mustache package.json README.tpl.md > README.md",
+    "test": "npm run test:node",
+    "test:all": "npm run test:node && npm run test:browser",
+    "test:browser": "npm run build:tests && karma start",
+    "test:node": "nyc --reporter=html --reporter=text mocha",
+    "version": "npm run build && npm run readme && git add -A dist README.md"
+  },
+  "version": "0.1.10"
 }
